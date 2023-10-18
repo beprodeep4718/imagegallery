@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Dela+Gothic+One&family=Gabarito:wght@600&family=Lato&family=Nunito+Sans:opsz,wght@6..12,300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: #001524;
+    display: grid;
+    place-items: center;
+    font-size: 62.5%;
+}
+
+.gallary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 1.6rem 3.2rem;
+}
+
+.card {
+    height: 34rem;
+    width: 24rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.card img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: all 0.5s ease;
+}
+
+.card .cont {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    color: white;
+    top: 0;
+    left: 0;
+    background-color: #445D48;
+    border-radius: 8px;
+    padding: 16px;
+    transform: translateY(100%);
+    transition: all 0.5s ease;
+}
+
+.cont h1 {
+    font-size: 4rem;
+    margin-bottom: 4px;
+}
+
+.cont p {
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 15px;
+    color: rgb(173, 173, 173);
+}
+
+.card:hover .cont {
+    transform: translateY(60%);
+}
+
+.card:hover img {
+    scale: 1.14;
+    filter: blur(2px) grayscale(100%);
+}
